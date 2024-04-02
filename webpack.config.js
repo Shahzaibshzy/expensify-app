@@ -6,7 +6,7 @@ module.exports = (env, argv) => {
     mode: "development",
     entry: "./src/app.js",
     output: {
-      path: path.join(__dirname, "public"),
+      path: path.join(__dirname, "public", "dist"),
       filename: "bundle.js",
     },
     plugins: [
@@ -40,6 +40,7 @@ module.exports = (env, argv) => {
       static: path.join(__dirname, "public"),
       historyApiFallback: true,
       compress: true,
+      publicPatk: "/dist/",
       port: 9000,
     },
   };
